@@ -1,5 +1,5 @@
 /*
- * @(#)BubbleSortTest.java  2016.12.11
+ * @(#)QuickSortTest.java  2016.12.11
  *
  * Copyright 2016 NHN Corp. All rights Reserved. 
  * NHN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
@@ -12,28 +12,28 @@ import org.junit.Test;
  *
  * @author NAVER
  */
-public class BubbleSortTest {
-	private BubbleSort bubbleSort = new BubbleSort();
+public class QuickSortTest {
+	private QuickSort quickSort = new QuickSort();
 
 	@Test
-	public void testAscSort() throws Exception {
+	public void ascSort() throws Exception {
 		Integer[] intArray = ArrayGenerator.getRandomIntegerArray();
 		System.out.println("Init Print Array : ");
 		printArray(intArray);
 
 		System.out.println("Result Print Array : ");
-		Integer[] resultArray = bubbleSort.sort(intArray, "asc");
+		Integer[] resultArray = quickSort.sort(intArray, "asc");
 		printArray(resultArray);
 	}
 
 	@Test
-	public void testDescSort() throws Exception {
+	public void descSort() throws Exception {
 		Integer[] intArray = ArrayGenerator.getRandomIntegerArray();
 		System.out.println("Init Print Array : ");
 		printArray(intArray);
 
 		System.out.println("Result Print Array : ");
-		Integer[] resultArray = bubbleSort.sort(intArray, "desc");
+		Integer[] resultArray = quickSort.sort(intArray, "desc");
 		printArray(resultArray);
 	}
 
