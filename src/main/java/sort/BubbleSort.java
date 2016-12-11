@@ -1,11 +1,13 @@
 package sort;
 
+import enums.SortOrder;
+
 /**
  * @author NAVER
  */
 public class BubbleSort implements Sort<Integer> {
 	@Override
-	public Integer[] sort(Integer[] sourceArray, String ord) {
+	public Integer[] sort(Integer[] sourceArray, SortOrder ord) {
 		Integer[] copyArray = sourceArray.clone();
 
 		for(int count = 1; count < copyArray.length; count++) {
@@ -16,5 +18,14 @@ public class BubbleSort implements Sort<Integer> {
 			}
 		}
 		return copyArray;
+	}
+
+
+	private <T extends Comparable<T>> boolean compare(T target1, T target2, SortOrder ord) {
+		switch(ord) {
+			case ASCENDING: return target1.compareTo(target2) > 0;
+			case DESCENDING: return  target1.compareTo(target2) < 0;
+			default: return false;
+		}
 	}
 }

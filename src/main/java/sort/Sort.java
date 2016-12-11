@@ -1,12 +1,12 @@
 package sort;
 
-import org.apache.commons.lang3.StringUtils;
+import enums.SortOrder;
 
 /**
  * @author NAVER
  */
 public interface Sort<T extends Comparable> {
-	T[] sort(T[] sourceArray, String ord);
+	T[] sort(T[] sourceArray, SortOrder ord);
 
 	default T[] swap(T[] sourceArray, int targetIndex1, int targetIndex2) {
 		T temp = sourceArray[targetIndex1];
@@ -14,13 +14,5 @@ public interface Sort<T extends Comparable> {
 		sourceArray[targetIndex2] = temp;
 
 		return sourceArray;
-	}
-
-	default boolean compare(T target1, T target2, String ord) {
-		if (StringUtils.equals(ord, "desc")) {
-			return target1.compareTo(target2) < 0;
-		} else {
-			return target1.compareTo(target2) > 0;
-		}
 	}
 }

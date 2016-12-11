@@ -6,6 +6,7 @@
  */
 package sort;
 
+import enums.SortOrder;
 import org.junit.Test;
 
 import sort.utils.ArrayGenerator;
@@ -20,22 +21,22 @@ public class BubbleSortTest {
 	@Test
 	public void ascSort() throws Exception {
 		Integer[] intArray = ArrayGenerator.getRandomIntegerArray();
-		System.out.println("Init Print Array : ");
+		System.out.println("Ascending Init Print Array : ");
 		ArrayGenerator.printArray(intArray);
 
-		System.out.println("Result Print Array : ");
-		Integer[] resultArray = bubbleSort.sort(intArray, "asc");
+		System.out.println("Ascending Result Print Array : ");
+		Integer[] resultArray = bubbleSort.sort(intArray, SortOrder.ASCENDING);
 		ArrayGenerator.printArray(resultArray);
 	}
 
 	@Test
 	public void descSort() throws Exception {
 		Integer[] intArray = ArrayGenerator.getRandomIntegerArray();
-		System.out.println("Init Print Array : ");
+		System.out.println("Decending Init Print Array : ");
 		ArrayGenerator.printArray(intArray);
 
-		System.out.println("Result Print Array : ");
-		Integer[] resultArray = bubbleSort.sort(intArray, "desc");
+		System.out.println("Decending Result Print Array : ");
+		Integer[] resultArray = bubbleSort.sort(intArray,  SortOrder.DESCENDING);
 		ArrayGenerator.printArray(resultArray);
 	}
 }
