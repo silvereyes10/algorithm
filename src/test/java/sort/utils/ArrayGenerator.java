@@ -1,4 +1,4 @@
-package sort;
+package sort.utils;
 
 import java.util.Random;
 
@@ -18,5 +18,12 @@ public class ArrayGenerator {
 		}
 
 		return integerArray;
+	}
+
+	public static <T> void printArray(T[] targetArray) {
+		for (int i = 0; i < targetArray.length; i++) {
+			System.out.print(targetArray[i] + " ");
+		}
+		System.out.print("\n\n");
 	}
 }

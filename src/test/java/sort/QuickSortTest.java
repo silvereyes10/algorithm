@@ -8,6 +8,8 @@ package sort;
 
 import org.junit.Test;
 
+import sort.utils.ArrayGenerator;
+
 /**
  *
  * @author NAVER
@@ -19,28 +21,21 @@ public class QuickSortTest {
 	public void ascSort() throws Exception {
 		Integer[] intArray = ArrayGenerator.getRandomIntegerArray();
 		System.out.println("Init Print Array : ");
-		printArray(intArray);
+		ArrayGenerator.printArray(intArray);
 
 		System.out.println("Result Print Array : ");
 		Integer[] resultArray = quickSort.sort(intArray, "asc");
-		printArray(resultArray);
+		ArrayGenerator.printArray(resultArray);
 	}
 
 	@Test
 	public void descSort() throws Exception {
 		Integer[] intArray = ArrayGenerator.getRandomIntegerArray();
 		System.out.println("Init Print Array : ");
-		printArray(intArray);
+		ArrayGenerator.printArray(intArray);
 
 		System.out.println("Result Print Array : ");
 		Integer[] resultArray = quickSort.sort(intArray, "desc");
-		printArray(resultArray);
-	}
-
-	private <T> void printArray(T[] targetArray) {
-		for (int i = 0; i < targetArray.length; i++) {
-			System.out.print(targetArray[i] + " ");
-		}
-		System.out.print("\n\n");
+		ArrayGenerator.printArray(resultArray);
 	}
 }
