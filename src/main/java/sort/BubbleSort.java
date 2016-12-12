@@ -5,10 +5,10 @@ import enums.SortOrder;
 /**
  * @author NAVER
  */
-public class BubbleSort implements Sort<Integer> {
+public class BubbleSort<T extends Comparable<T>> implements Sort<T> {
 	@Override
-	public Integer[] sort(Integer[] sourceArray, SortOrder ord) {
-		Integer[] copyArray = sourceArray.clone();
+	public T[] sort(T[] sourceArray, SortOrder ord) {
+		T[] copyArray = sourceArray.clone();
 
 		for(int count = 1; count < copyArray.length; count++) {
 			for (int index = 0; index < copyArray.length - count; index++) {
@@ -20,8 +20,7 @@ public class BubbleSort implements Sort<Integer> {
 		return copyArray;
 	}
 
-
-	private <T extends Comparable<T>> boolean compare(T target1, T target2, SortOrder ord) {
+	private boolean compare(T target1, T target2, SortOrder ord) {
 		switch(ord) {
 			case ASCENDING: return target1.compareTo(target2) > 0;
 			case DESCENDING: return  target1.compareTo(target2) < 0;

@@ -6,9 +6,9 @@
  */
 package sort;
 
-import enums.SortOrder;
 import org.junit.Test;
 
+import enums.SortOrder;
 import sort.utils.ArrayGenerator;
 
 /**
@@ -25,7 +25,7 @@ public class BubbleSortTest {
 		ArrayGenerator.printArray(intArray);
 
 		System.out.println("Ascending Result Print Array : ");
-		Integer[] resultArray = bubbleSort.sort(intArray, SortOrder.ASCENDING);
+		Integer[] resultArray = (Integer[])bubbleSort.sort(intArray, SortOrder.ASCENDING);
 		ArrayGenerator.printArray(resultArray);
 	}
 
@@ -36,7 +36,7 @@ public class BubbleSortTest {
 		ArrayGenerator.printArray(intArray);
 
 		System.out.println("Decending Result Print Array : ");
-		Integer[] resultArray = bubbleSort.sort(intArray,  SortOrder.DESCENDING);
+		Integer[] resultArray = (Integer[]) bubbleSort.sort(intArray,  SortOrder.DESCENDING);
 		ArrayGenerator.printArray(resultArray);
 	}
 }
