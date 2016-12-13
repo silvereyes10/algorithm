@@ -16,7 +16,7 @@ import sort.utils.ArrayGenerator;
  * @author NAVER
  */
 public class QuickSortTest {
-	private QuickSort quickSort = new QuickSort();
+	private QuickSort<Integer> quickSort = new QuickSort();
 
 	@Test
 	public void ascSort() throws Exception {
@@ -25,7 +25,7 @@ public class QuickSortTest {
 		ArrayGenerator.printArray(intArray);
 
 		System.out.println("Ascending Result Print Array : ");
-		Integer[] resultArray = (Integer[]) quickSort.sort(intArray, SortOrder.ASCENDING);
+		Integer[] resultArray = quickSort.sort(intArray, SortOrder.ASCENDING);
 		ArrayGenerator.printArray(resultArray);
 	}
 
@@ -36,7 +36,7 @@ public class QuickSortTest {
 		ArrayGenerator.printArray(intArray);
 
 		System.out.println("Decending Result Print Array : ");
-		Integer[] resultArray = (Integer[]) quickSort.sort(intArray, SortOrder.DESCENDING);
+		Integer[] resultArray = quickSort.sort(intArray, SortOrder.DESCENDING);
 		ArrayGenerator.printArray(resultArray);
 	}
 }

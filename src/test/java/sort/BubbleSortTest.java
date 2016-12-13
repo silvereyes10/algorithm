@@ -16,7 +16,7 @@ import sort.utils.ArrayGenerator;
  * @author NAVER
  */
 public class BubbleSortTest {
-	private BubbleSort bubbleSort = new BubbleSort();
+	private BubbleSort<Integer> bubbleSort = new BubbleSort<>();
 
 	@Test
 	public void ascSort() throws Exception {
@@ -25,7 +25,7 @@ public class BubbleSortTest {
 		ArrayGenerator.printArray(intArray);
 
 		System.out.println("Ascending Result Print Array : ");
-		Integer[] resultArray = (Integer[])bubbleSort.sort(intArray, SortOrder.ASCENDING);
+		Integer[] resultArray = bubbleSort.sort(intArray, SortOrder.ASCENDING);
 		ArrayGenerator.printArray(resultArray);
 	}
 
@@ -36,7 +36,7 @@ public class BubbleSortTest {
 		ArrayGenerator.printArray(intArray);
 
 		System.out.println("Decending Result Print Array : ");
-		Integer[] resultArray = (Integer[]) bubbleSort.sort(intArray,  SortOrder.DESCENDING);
+		Integer[] resultArray = bubbleSort.sort(intArray,  SortOrder.DESCENDING);
 		ArrayGenerator.printArray(resultArray);
 	}
 }
