@@ -1,10 +1,9 @@
 package sort;
 
-import java.lang.reflect.Array;
-
+import enums.SortOrder;
 import org.apache.commons.lang3.ArrayUtils;
 
-import enums.SortOrder;
+import java.lang.reflect.Array;
 
 /**
  * Created by silvereyes10 on 2016-12-15.
@@ -17,7 +16,7 @@ public class MergeSort<T extends Comparable<T>> implements Sort<T> {
 
 	private T[] mergeSort(T[] sourceArray, int startIndex, int endIndex, SortOrder ord) {
 		if (sourceArray.length <= 1) {
-			return ArrayUtils.subarray(sourceArray, startIndex, endIndex);
+			return sourceArray;
 		}
 		// sourceArray의 length가 2 이상이면 mergeSort
 		int midIndex = (startIndex + endIndex) / 2;
