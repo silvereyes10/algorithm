@@ -9,7 +9,7 @@ package sort;
 import org.junit.Test;
 
 import enums.SortOrder;
-import sort.utils.ArrayGenerator;
+import utils.ArrayGenerator;
 
 /**
  *

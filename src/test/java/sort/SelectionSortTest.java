@@ -2,7 +2,7 @@ package sort;
 
 import enums.SortOrder;
 import org.junit.Test;
-import sort.utils.ArrayGenerator;
+import utils.ArrayGenerator;
 
 /**
  * Created by silvereyes10 on 2016-12-15.
