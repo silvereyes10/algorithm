@@ -13,4 +13,9 @@ public class SumOfSelfNumberTest {
 		assertEquals(SumOfSelfNumber.calculateNumber(100), 101);
 		assertEquals(SumOfSelfNumber.calculateNumber(91), 101);
 	}
+
+	@Test
+	public void testSumOfIntegerRange() throws Exception {
+		assertEquals(SumOfSelfNumber.getRangeSum(1, 10), 45);
+	}
 }
