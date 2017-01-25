@@ -1,4 +1,4 @@
-package codingdojang;
+package codingdojang.numbercounter;
 
 /**
  * Created by NAVER on 2017-01-04.

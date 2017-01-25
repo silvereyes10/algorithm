@@ -1,4 +1,4 @@
-package codingdojang;
+package codingdojang.selfnumber;
 
 import com.google.common.collect.Sets;
 

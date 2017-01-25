@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import codingdojang.selfnumber.SumOfSelfNumber;
+
 /**
  * Created by 남세 on 2017-01-15.
  */
